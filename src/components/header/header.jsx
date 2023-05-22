@@ -1,54 +1,94 @@
 import React, { Component } from "react";
-import { RxMagnifyingGlass } from "react-icons/rx";
-import { FaImdb } from "react-icons/fa";
-import { FiPlay } from "react-icons/fi";
-import { TbMovie } from "react-icons/tb";
+import * as S from "./header.styled";
 import Logo from "../images/Logo.svg";
 import Star from "../images/Star.svg";
 
 export default class Header extends Component {
   render() {
     return (
-      <header>
-        <navbar>
-          <logo>
+      <S.Header>
+        <S.Navbar>
+          <S.Options>
             <img src={Logo} alt="Dell Movies" />
-          </logo>
-          <gender>
-            <h2>Séries</h2>
-            <h2>Filmes</h2>
-          </gender>
-          <options>
-            <RxMagnifyingGlass />
-            <h2>Filtro</h2>
-            <h2>Login</h2>
-          </options>
-        </navbar>
-        <banner>
+          </S.Options>
+          <S.Options>
+            <S.Listitem>
+              <a
+                href="https://github.com/eduu17"
+                target="_blank"
+                rel="noreferrer"
+              >
+                Séries
+              </a>
+            </S.Listitem>
+            <S.Listitem>
+              <a
+                href="https://github.com/eduu17"
+                target="_blank"
+                rel="noreferrer"
+              >
+                Filmes
+              </a>
+            </S.Listitem>
+          </S.Options>
+          <S.Options>
+            <S.StyledIcon />
+            <S.Listitem>
+              <a
+                href="https://github.com/eduu17"
+                target="_blank"
+                rel="noreferrer"
+              >
+                Filtro
+              </a>
+            </S.Listitem>
+            <S.Listitem>
+              <a
+                href="https://github.com/eduu17"
+                target="_blank"
+                rel="noreferrer"
+              >
+                Login
+              </a>
+            </S.Listitem>
+          </S.Options>
+        </S.Navbar>
+        <S.Banner>
           <h1>Avatar: o Caminho da Água</h1>
-          <bannercontent>
+          <h2>3hr 23min | Fantasia, Família | 2023</h2>
+          <S.Bannercontent>
             <img src={Star} alt="Star" />
-            <h2>9,9</h2>
-            <FaImdb />
-          </bannercontent>
+            <h2>
+              9,9<span>/10</span>
+            </h2>
+            <S.StyledIMDB />
+          </S.Bannercontent>
           <p>
             Após formar uma família, Jake Sully e Ney'tiri fazem de tudo para
             ficarem juntos. No entanto, eles devem sair de casa e explorar as
             regiões de Pandora quando uma antiga ameaça ressurge, e Jake deve
             travar uma guerra difícil contra os humanos.
           </p>
-          <bannerbutton>
-            <a href="#">
-              <FiPlay />
+          <S.BannerButton>
+            <a
+              href="https://github.com/eduu17"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <S.StylePlay />
               Assistir Agora
             </a>
-            <a href="#">
-              <TbMovie />
+            <a
+              href="https://github.com/eduu17"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <S.StyleFilm />
               Trailer
             </a>
-          </bannerbutton>
-        </banner>
-      </header>
+          </S.BannerButton>
+        </S.Banner>
+      </S.Header>
     );
   }
 }
